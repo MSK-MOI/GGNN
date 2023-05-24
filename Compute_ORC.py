@@ -23,10 +23,11 @@ hprd_genes=[k[0] for k in hprd_genes]
 adj.columns=hprd_genes
 adj.index=hprd_genes
 
-input_folder="/home/jiening666/Data/mm_CoMMpass/out/"
-omics=["RNA","CNA"]    
-#input_folder="/media/jiening666/Data/Mac_temp/Data_For_CurvNet/brca_tcga/out/"
-#omics=["RNA","CNA","Methyl"]
+#input_folder="/home/jiening666/Data/mm_CoMMpass/out/"
+#omics=["RNA","CNA"]
+ 
+input_folder="./data/lgg_tcga/out/"
+omics=["RNA","CNA","Methyl"]
 #omics=["CNA"]
 for omic in omics:
     input_name=input_folder+omic+".csv"

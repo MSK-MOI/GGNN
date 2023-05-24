@@ -22,8 +22,8 @@ def find_edge_neighbors(Adj):
     indicator=indicator.astype(float)
     return indicator
 
-def find_pathway(Adj,gene_list):
-    T = pd.read_excel('data/c2.cp.kegg.v5.2.symbols.xls',header=None)
+def find_pathway(Path_dir,Adj,gene_list):
+    T = pd.read_excel(Path_dir,header=None)
     pathway_names=T.values[:,0]
     N = T.values.shape[0]
     n=Adj.shape[0]

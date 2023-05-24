@@ -22,8 +22,7 @@ adj_inter<-adj[inter_genes,inter_genes]
 s<-colSums(adj_inter)
 inter_genes<-inter_genes[s>0]
 # data set
-#setwd("D:/Mac_temp/Data_For_CurvNet/sarc_tcga")
-setwd("./Data/Mac_temp/Data_For_CurvNet/lihc_tcga")
+setwd("./data/lgg_tcga")
 
 CNA <- read.table("data_cna.txt", sep="\t", stringsAsFactors=FALSE, header=TRUE)
 CNA<-CNA[!duplicated(CNA[,1]),]

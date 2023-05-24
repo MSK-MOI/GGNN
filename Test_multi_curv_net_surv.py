@@ -28,6 +28,8 @@ N_Round = 1
 ## Load HPRD network
 adj=pd.read_csv("./data/adj.txt",header=None)
 hprd_genes=pd.read_csv("./data/hprd.txt",header=None)
+## Load Kegg pathway
+Path_dir='./data/c2.cp.kegg.v5.2.symbols.xls'
 hprd_genes=hprd_genes.values.tolist()
 hprd_genes=[k[0] for k in hprd_genes]
 adj.columns=hprd_genes
@@ -35,14 +37,14 @@ adj.index=hprd_genes
 
 ## Load multiomics data
 ### For TCGA
-#study="brca"
-#omic_to_use=["RNA","CNA","Methyl"]
-#input_folder="/home/jiening666/Data_For_CurvNet/"+study+"_tcga/out/"
+study="lgg"
+omic_to_use=["RNA","CNA","Methyl"]
+input_folder="./data/"+study+"_tcga/out/"
 
 ### For Commpass multiple myeloma
-study="mm"
-input_folder="./data/"+study+"_CoMMpass/out/"
-omic_to_use=["RNA","CNA"]
+#study="mm"
+#input_folder="./data/"+study+"_CoMMpass/out/"
+#omic_to_use=["RNA","CNA"]
 
 
 clinn_file=input_folder+"clinn.csv"
@@ -121,10 +123,9 @@ for r in range(N_Round):
         edge_mask=torch.from_numpy(edge_mask).type(dtype).cuda()
 
         gene_s=[in_genes[i] for i in largest_cc]
-        pathway_mask=find_pathway(Adj,gene_s)
+        pathway_mask=torch.from_numpy(find_pathway(Path_dir,Adj,gene_s)).type(dtype).cuda()
         Pathway_Nodes=pathway_mask.shape[0]
-        pathway_mask=torch.from_numpy(find_pathway(Adj,gene_s)).type(dtype).cuda()
-
+        
         omic_data=tb.values
         omic_data=[omic_data[i][:] for i in largest_cc]
         if omic=="Methyl":
