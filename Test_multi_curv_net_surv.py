@@ -41,7 +41,7 @@ adj.index=hprd_genes
 
 ### For Commpass multiple myeloma
 study="mm"
-input_folder="/home/jiening666/Data_For_CurvNet/"+study+"_CoMMpass/out/"
+input_folder="./data/"+study+"_CoMMpass/out/"
 omic_to_use=["RNA","CNA"]
 
 
