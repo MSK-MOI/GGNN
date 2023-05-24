@@ -26,5 +26,5 @@ A Gemetric informed Graph neural network based model for Cancer survival predict
 * Curvature results are saved in "out/" as RNA_curv.csv, CNA_curv.csv and Methyl_curv.csv
 
 4. Run GGNN model: Test_multi_curv_net_surv.py
-* A processed data set of CoMMPass study of multiple myeloma with HPRD network and KEGG pathway can be download via the link bellow: 
+* A processed data set of TCGA study of LGG with HPRD network and KEGG pathway can be download via the link bellow: 
 * https://stonybrookmedicine.box.com/s/7t8qbrmni7n16lcfu3kmlnwje9l6qgdy
