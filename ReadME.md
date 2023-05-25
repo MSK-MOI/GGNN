@@ -27,4 +27,4 @@ A Gemetric informed Graph neural network based model for Cancer survival predict
 
 4. Run GGNN model: Test_multi_curv_net_surv.py
 * A processed data set of TCGA study of LGG with HPRD network and KEGG pathway can be download via the link bellow: 
-* https://stonybrookmedicine.box.com/s/7t8qbrmni7n16lcfu3kmlnwje9l6qgdy
+* [https://stonybrookmedicine.box.com/s/7t8qbrmni7n16lcfu3kmlnwje9l6qgdy](https://stonybrookmedicine.box.com/s/7t8qbrmni7n16lcfu3kmlnwje9l6qgdy)
