@@ -1,5 +1,5 @@
 # GGNN
-A Gemetric informed Graph neural network based model for Cancer survival prediction
+[A Gemetric informed Graph neural network based model for Cancer survival prediction](https://doi.org/10.1016/j.compbiomed.2023.107117)
 
 ## Requirements
 * pytorch
